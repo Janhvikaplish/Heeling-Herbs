@@ -1,0 +1,98 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="css1.css">
+<title>Travelholic Welcomes You All!!</title>
+<script type="text/javascript" src ="js1.js"></script>
+</head>
+<body>
+<br>	
+<h1>TRAVELHOLIC WELCOMES ALL THE WANDERLUST NERVES!!</h1>
+<h2>"Customize Your Maldives Trip With Us"</h2>
+<p id=p1>Fill the following details to get your maldives customized package in 70,000 INR (per person)</p>
+<h3><strong>PERSONAL DETAILS</strong></h3>
+<form id =form1>
+<table id="table01" border="0" >
+<tr>
+<td class="lable_col">Full Name:</td>
+<td class="input_col"><input type="text" name="full name" id="fullname" onblur="validfullname();"  required></td>
+<td class="feedback_col"><span id="namepromt"></span></td>
+</tr>
+<tr>
+<td class="lable_col">Phone Number:</td>
+<td class="input_col"><input type="text" name="phone no" id="phoneno" onblur="validphoneno();" placeholder="XXX-XXX-XXXX" required></td>
+<td class="feedback_col"><span id="phonepromt"></span></td>
+</tr>
+<tr>
+<td class="lable_col">No. Of People:</td>
+<td class="input_col"><input type="number" name="people" id="people" onblur="validpeople();" placeholder="1-20" required></td>
+<td class="feedback_col"><span id="peoplepromt"></span></td>
+</tr>
+<tr>
+<td class="lable_col">Email Address:</td>
+<td class="input_col"><input type="text" name="email" id="email" placeholder="Must contain '@' & ' . '" required></td>
+</tr>
+
+<tr>
+<td class="lable_col">State:</td>
+<td class="input_col"><input type="text" name="state" id="state"  required></td>
+</tr>
+<tr>
+<td class="lable_col">Nearest Airport:</td>
+<td class="input_col">	<input type="text" name="near" id="near"  required></td>
+</tr>
+</table>
+</form>
+<h3><strong>TRIP DETAILS</strong><br><br>
+<form id=form2>
+<table border="0" id="table02">
+<tr>
+<td class="lable_col">Date Of The Trip</td>
+<td class="input_col"><input type="date" name="date" id="date" required></td>
+</tr>	
+
+<tr>
+<td class="lable_col">Travel By:</td>
+<td class="input_col"><input type="radio" name= "flight" value="indigo" id="indigo" required>IndiGo Airlines
+<input type="radio" name= "flight" value="airasia" id="airasia" required>AirAsia Airlines</td>
+</tr>
+<tr>
+<td class="lable_col">Type Of Trip:</td>
+<td class="input_col"><input type="radio" name= "typeo" value="Friends" id="fa" required>With Friends!
+<input type="radio" name= "typeo" value="Family" id="fy" required>With Family!	
+<input type="radio" name= "typeo" value="Honeymoon" id="ho" required>Honeymoon!
+<input type="radio" name= "typeo" value="Solo" id="so" required>Solo!</td></tr>
+<tr>
+<td class="lable_col">Choose The Island:</td>
+<td class="input_col"><input type="radio" name= "island" value="male" id="m" required>Malé
+<input type="radio" name= "island" value="hulhu" id="hul" required>Hulhumalé
+<input type="radio" name= "island" value="meeru" id="me" required>Meeru
+<input type="radio" name= "island" value="baros" id="ba" required>Baros</td></tr>
+<tr>
+<td class="lable_col">Type Of Accommodation:</td>
+<td class="input_col"><input type="radio" name= "acc" value="Land" id="la" required>Land Villa
+<input type="radio" name= "acc" value="water" id="wa" required>Water Villa
+<input type="radio" name= "acc" value="bang" id="bg" required>Bungalow
+</td></tr>
+<tr>	
+<td class="lable_col">Types Of Cuisines:</td>
+<td class="input_col"><input type="checkbox" name= "meal" value="ind" id="ind" required>Indian
+<input type="checkbox" name= "meal" value="ita" id="ita" required>Italian
+<input type="checkbox" name= "meal" value="chi" id="chi" required>Chinese
+<input type="checkbox" name= "meal" value="mex" id="mex" required>Mexican
+<input type="checkbox" name= "meal" value="ca" id="ca" required>Caribbean
+</td></tr>
+<tr>	
+<td class="lable_col">Types Of Activities:</td>
+<td class="input_col"><input type="checkbox" name= "act" value="sno" id="sno" required>Snorkeling
+<input type="checkbox" name= "act" value="scu" id="scu" required>Scuba Diving
+<input type="checkbox" name= "act" value="spa" id="spa" required>Spa
+<input type="checkbox" name= "act" value="fl" id="fl" required>Water Flying
+<input type="checkbox" name= "act" value="pa" id="pa" required>Parasailing
+</td></tr>
+</table>
+</form>
+<input type="button" class="button" value="Customize Now" id="but" onclick="customize();">
+<p id=custom>
+</p>
+</body>
+</html>

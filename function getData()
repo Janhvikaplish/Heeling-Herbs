@@ -1,0 +1,56 @@
+function getData()
+{
+    //gettting the values
+    var email = document.getElementById("email").value;
+    var password= document.getElementById("password").value; 
+    var telephone= document.getElementById("telephone").value; 
+    var mobile= document.getElementById("mobile").value; 
+    //saving the values in local storage
+    localStorage.setItem("txtValue", email);
+    localStorage.setItem("txtValue1", password);
+    localStorage.setItem("txtValue2", mobile);
+    localStorage.setItem("txtValue3", telephone);   
+}
+  input{
+    font-size: 25px;
+  }
+  label{
+    color: rgb(16, 8, 46);
+    font-weight: bolder;
+  }
+  #data{
+
+  }
+   <fieldset style="width: fit-content; margin: 0 auto; font-size: 30px;">
+        <form action="action.html">
+        <legend>Sign Up Form</legend>
+        <label>Email:<br />
+        <input type="text" name="email" id="email"/></label><br />
+        <label>Password<br />
+        <input type="text" name="password" id="password"/></label><br>
+        <label>Mobile:<br />
+        <input type="text" name="mobile" id="mobile"/></label><br />
+        <label>Telephone:<br />
+        <input type="text" name="telephone" id="telephone"/></label><br> 
+        <input type="submit" value="Submit" onclick="getData()">
+    </form>
+    </fieldset>
+
+
+
+
+
+
+    document.getElementById("data").innerHTML=localStorage.getItem("txtValue");
+document.getElementById("data1").innerHTML=localStorage.getItem("txtValue1");
+document.getElementById("data2").innerHTML=localStorage.getItem("txtValue2");
+document.getElementById("data3").innerHTML=localStorage.getItem("txtValue3");
+ <div style=" font-size: 30px;  color: rgb(32, 7, 63); text-align: center;">
+    <div style="font-size: 40px; color: red; margin: 0 auto;">
+        Here's Your data
+    </div>
+    The Email is equal to: <span id="data"> Email</span><br> 
+    The Password is equal to <span id="data1"> Password</span><br>
+    The Mobile is equal to <span id="data2"> Mobile</span><br>
+    The Telephone is equal to <span id="data3"> Telephone</span><br>
+    </div>

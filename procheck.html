@@ -1,0 +1,325 @@
+<html>
+<head>
+	<title>Checkout Page</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel = "icon" href =  
+"https://dab1nmslvvntp.cloudfront.net/wp-content/uploads/2009/09/HolidayInnNewSquare.png"
+type = "image/x-icon">
+<script>
+  function validcard()
+  {
+    var a=document.getElementById("ccnum").value;
+    var l=a.length;
+    if(l<16)
+      alert("Enter a 16 digit card number");
+
+  }
+  </script>
+	<style>
+		body{
+			
+			 background-color: lavender;
+		}
+    .navbar {
+      top:0px;
+  width: 100%;
+  margin:0;
+  padding:0;
+  background-color: #555;
+  overflow: auto;
+  position: fixed;
+}
+
+.navbar a {
+  float: left;
+  padding: 17px;
+  color: white;
+  text-decoration: none;
+  font-size: 21px;
+}
+
+.navbar a:hover {
+  background-color: black;
+}
+
+
+
+@media screen and (max-width: 500px) {
+  .navbar a {
+    float: none;
+    display: block;
+  }
+}
+.body1{
+  margin-top:110px;
+  margin-left:120px;
+  margin-right:120px;
+  margin-bottom:50px;
+}
+
+		.right{
+			float:right;
+		}
+		.order {
+  background-color: lavenderblush;
+  padding: 20px 50px 20px 50px;
+  border: 2px solid black;
+  border-radius: 3px;
+  
+}
+.para{
+	font-size:35px;
+}
+.cen{
+	text-align:center;
+	font-size:40px;
+}
+input.mon1{
+  	font-size:33px;
+  	width:100px;
+  }
+  input.button{
+  	font-size:35px;
+  	margin-left:30%;
+  	margin-right:30%;
+  	width:40%;
+  	height: 60px;
+  	background-color:Turquoise;
+
+
+  }
+  #custom{
+  	text-align: center;
+  	font-size:37px;
+  	color:darkblue;
+  }
+  input[type=text] {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+.in{
+	font-size:33px;
+  	width:100px;
+
+}
+
+
+
+
+
+.row {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+  margin: 0 -16px;
+}
+
+.col-25 {
+  -ms-flex: 25%; /* IE10 */
+  flex: 25%;
+}
+
+.col-50 {
+  -ms-flex: 50%; /* IE10 */
+  flex: 50%;
+}
+
+.col-75 {
+  -ms-flex: 75%; /* IE10 */
+  flex: 75%;
+}
+
+.col-25,
+.col-50,
+.col-75 {
+  padding: 0 16px;
+}
+
+.container {
+  background-color: lavenderblush;
+  padding: 5px 20px 15px 20px;
+  border: 2px solid black;
+  border-radius: 3px;
+}
+
+input[type=text] {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+label {
+  margin-bottom: 10px;
+  display: block;
+}
+
+.icon-container {
+  margin-bottom: 20px;
+  padding: 7px 0;
+  font-size: 24px;
+}
+
+.btn {
+  background-color: salmon;
+  color: white;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  width: 100%;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 17px;
+}
+
+.btn:hover {
+  background-color:midnightblue;
+}
+
+a {
+  color: #2196F3;
+}
+
+hr {
+  border: 1px solid lightgrey;
+}
+.lab{
+	font-size:35;
+}
+input.check{
+  	height:30px;
+  	width: 30px;
+  }
+ input.lab1{
+ 	font-size:35;
+
+ }
+ select{
+  height:60px;
+  width:1125px;
+  font-size:25px;
+}
+
+
+
+
+	</style>
+	<script type="text/javascript" src ="checkjs.js">
+   $(document).ready(function() {
+    $('select').change(function() {
+     $('select option')[0].value=$('select option:selected').val();
+     $('select option')[0].innerHTML=$('select option:selected').val();
+     $("select").val($('select option:selected').val());
+      
+      console.log($('select option:selected').val());
+    });
+  });
+
+   
+
+
+
+ 
+  </script>
+</head>
+<body>
+
+  <div class="navbar">
+  <a class="active" href="Introduction.html"><i class="fa fa-fw fa-home"></i> Home</a> 
+  <a href="Form.html"><i class="fa fa-fw fa-id-card-o"></i> Form</a> 
+  <a href="#"><i class="fa fa-fw fa-envelope"></i> Contact Us</a> 
+  <a href="#"><i class="fa fa-fw fa-list-ul "></i> About Us</a>
+  <a href="#"><i class="fa fa-fw fa-question-circle-o "></i> FAQs</a>
+</div>
+	<div class="body1">
+	<div class="order">
+		<h1 class="cen"><u>ORDER SUMMARY</u></h1>
+		<p class="para"><b>Cart</b> <span class="right"><b>1 Item</b></span></p>
+		<p class="para">Your Personalized immunity kit: <span class="right"><span>&#8377;</span>1500</span></p>
+		<p class="para">Enter No. of Months(Subscription) <span class="right"><input type="number" id="mon" name="mon" placeholder="00" required class="mon1"></span></p>
+		<input type="button" class="button" value="Grand Total" id="but" onclick="total();">
+<p  id=custom>
+</p><br><br><br>
+</div><br><br><br><br>
+
+
+    <div class="container">
+      <form action="action.html">
+      
+        
+          	<h1 class="cen"> <u>PROCEED TO PAY</u></h1>
+            <h2 class="lab">Billing details</h2>
+            <label class="lab" for="fname"><i class="fa fa-user"></i> Full Name</label>
+            <input class="lab1"type="text" id="fname" name="firstname" required style="width:1125px; height:60px" oninvalid="alert('You must fill out the form!');" autocomplete="off">
+            <label  class="lab" for="email"><i class="fa fa-envelope"></i> Email</label>
+            <input class="lab1" type="email" id="email" name="email" placeholder="example1@example.com" style="width:1125px; height:60px" >
+            
+            <label class="lab" for="adr"><i class="fa fa-address-card-o"></i> Address</label>
+            <input class="lab1" type="text" id="adr" name="address" style="width:1125px; height:60px" autocomplete="off">
+            <label class="lab" for="city"><i class="fa fa-map-marker"></i>Pincode</label>
+            <input class="lab1" type="text" id="city" name="city" placeholder="XXX-XXX" style="width:1125px; height:60px" autocomplete="off"><br><br><hr>
+
+           
+         
+            <h2 class="lab" >Payment Methods</h2><br>
+            <input  type="radio" id="cash" name="rad" value="cash" class="check"><lable class="lab" for="cash">Cash On Delivery</lable><br><br>
+            <input type="radio" id="card" name="rad" value="card" class="check"><lable class="lab" for="card">Add Debit/Credit Card/ATM Card</lable><br><br>
+            <label class="lab" for="fname">Accepted Cards</label>
+            <div class="icon-container">
+              <i class="fa fa-cc-visa" style="color:navy;"></i>
+              <i class="fa fa-cc-amex" style="color:blue;"></i>
+              <i class="fa fa-cc-mastercard" style="color:red;"></i>
+              <i class="fa fa-cc-discover" style="color:orange;"></i>
+            </div>
+            <label class="lab"  for="cname">Name on Card</label>
+            <input class="lab1"  type="text" id="cname" name="cardname" required style="width:1125px; height:60px" autocomplete="off">
+            <label class="lab" for="ccnum">Credit card number</label>
+            <input class="lab1" type="number" id="ccnum" name="cardnumber" required min="16" maxlength="16" style="width:1125px; height:60px" autocomplete="off" placeholder="XXXX-XXXX-XXXX-XXXX">
+            <label class="lab" for="expmonth">Exp Month</label>
+           <select placeholder="MM">
+  <option name="" value="" style="display:none;"></option>
+  <option name="January" value="Jan">January</option>
+  <option name="February" value="Feb">February</option>
+  <option name="March" value="Mar">March</option>
+  <option name="April" value="Apr">April</option>
+  <option name="May" value="May">May</option>
+  <option name="June" value="Jun">June</option>
+  <option name="July" value="Jul">July</option>
+  <option name="August" value="Aug">August</option>
+  <option name="September" value="Sep">September</option>
+  <option name="October" value="Oct">October</option>
+  <option name="November" value="Nov">November</option>
+  <option name="December" value="Dec">December</option>
+</select>
+
+
+
+            
+            <label class="lab" for="expyear">Exp Year</label>
+            <input class="lab1" type="year" id="expyear" name="expyear" placeholder="2020" min="2020" max="2025" style="width:1125px; height:60px" autocomplete="off">
+            
+            <label class="lab" for="cvv">CVV</label>
+            <input class="lab1" type="number" id="cvv" name="cvv" placeholder="352" style="width:1125px; height:60px" autocomplete="off">
+              
+        
+        <input type="submit" value="ORDER NOW" class="btn" onclick="getData();" autocomplete="off">
+      </form>
+  </div>
+
+	
+
+		
+
+
+
+
+
+
+</div>
+</body>
+</html>

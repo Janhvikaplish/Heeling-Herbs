@@ -1,0 +1,41 @@
+<html>
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<title>Practice 18/2</title>
+<style>
+div {
+  border-style: solid;
+  height:300px;
+  width:700px;
+}
+.new-bg{
+    background-image:url("images.jpg");
+}
+.bg{
+	background-color: yellow;
+}
+	</style>
+	
+	<script>
+	$(document).ready(function(){	
+	$(".bu1").on("click",function(){
+    $("div").addClass('bg').text("Hello!");
+	});
+	$(".bu2").on("click",function(){
+    $("div").addClass('new-bg');
+	});
+	$(".bu3").on("click",function(){
+    $("div").removeClass();
+    $("div").removeClass();
+	});
+  	});
+
+	</script>
+</head>
+<body>
+	<div><p></p></div><br><br>
+	<button class="bu1">Button 1</button><br><br>
+	<button class="bu2">Button 2</button><br><br>
+	<button class="bu3">Button 3</button>
+</body>
+</html>
